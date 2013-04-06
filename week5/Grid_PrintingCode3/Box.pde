@@ -9,17 +9,17 @@ class Box {
   // We need to keep track of a Body and a width and height
   Body body;
   float r;
-  float[] rs = {5.f,6.f,13.f,5.f,6.f,6.f,13.f,13.f,21.f,21.f};
+
   float dest;
   float c;
   float w,h;
   
   // Constructor
   Box(float x, float y) {
-    w = rs[floor(random(0,rs.length))];
+    w = random(4,16);
     h = random(4, 16);
    
-    r = rs[floor(random(0,rs.length-1))];
+    r = w;
     dest  =  random(PI+QUARTER_PI,TWO_PI);
     // Add the box to the box2d world
     makeBody(new Vec2(x,y), r,r);

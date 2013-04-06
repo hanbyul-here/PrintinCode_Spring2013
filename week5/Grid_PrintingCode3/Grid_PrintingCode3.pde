@@ -30,7 +30,7 @@ boolean stepStart;
 boolean rec;
 
 void setup() {
-  size(floor(8.5*50), 11*50);
+  size(floor(8.5*50),  11*50);
   smooth();
   grid = new Grid(10, 10, 0.f, 10.f);
 
@@ -44,7 +44,7 @@ void setup() {
   // Create ArrayLists	
   boxes = new ArrayList<Box>();
   boundaries = new ArrayList<Boundary>();
-  font = createFont("Futura", 50);
+  font = createFont("clarendon", 50);
 
   stepStart = false;
   rec = false;
@@ -68,7 +68,7 @@ void setup() {
 
   boundaries.add(new Boundary(grid.getW(5), grid.getH(4.7), grid.getSW()*8, 0, false));
   boundaries.add(new Boundary(grid.getW(1), grid.getH(4.5), 0, grid.getSH()-30, false));
-boundaries.add(new Boundary(grid.getW(9), grid.getH(4.5), 0, grid.getSH()-30, false));
+  boundaries.add(new Boundary(grid.getW(9), grid.getH(4.5), 0, grid.getSH()-30, false));
   //  boundaries.add(new Boundary(grid.getW(5.7),grid.getH(9)-30,grid.getSW()*3.5,0,true));
 }
 
@@ -107,7 +107,7 @@ void draw() {
   textSize(65);
   fill(0);
   textAlign(CENTER);
-  text("The Capital", grid.getW(5), grid.getH(6));
+  text("CAPITAL", grid.getW(5), grid.getH(6));
   textSize(25.5);
   text("Critique of Political Economy", grid.getW(5), grid.getH(7)-10);
 
